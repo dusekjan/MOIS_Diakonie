@@ -1,0 +1,35 @@
+
+form {
+  padding: 32px 16px;
+  &.in-row {
+
+  }
+
+  &.in-column {
+    margin: auto;
+    width: 350px;
+    text-align: center;
+
+    input {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    button {
+      margin-top: 24px;
+    }
+
+    label {
+      .flex-row;
+      justify-content: flex-start;
+      margin-top: 32px;
+
+      svg {
+        margin-left: 5px;
+        margin-right: 6px;
+        width: 24px;
+        height: $width;
+      }
+    }
+  }
+}

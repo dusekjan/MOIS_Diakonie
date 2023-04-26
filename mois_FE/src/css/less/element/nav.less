@@ -1,0 +1,45 @@
+nav {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  color: @blue;
+  text-transform: uppercase;
+
+  #main-logo {
+    max-width: 260px;
+    width: 20%;
+    margin: 20px 0 0 20px;
+    transition: 10s ease-in-out 300ms;
+    cursor: pointer;
+
+    @media (max-width: 530px) {
+      display: none;
+    }
+
+
+    &:hover {
+      transform: rotate(360deg) scale(1.1);
+    }
+  }
+
+  #nav-links{
+    .flex-row;
+    position: fixed;
+    top: 20px;
+    right: 22px;
+
+    a {
+      margin: 0 10px;
+      .a-underline-transition;
+    }
+
+    svg {
+      color: @blue;
+      margin-left: 12px;
+      width: 30px;
+      height: $width;
+    }
+
+  }
+}
+

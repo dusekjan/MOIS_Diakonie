@@ -1,0 +1,80 @@
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("\\fonts\\Montserrat-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("\\fonts\\Montserrat-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+  font-style: italic;
+}
+
+body {
+  font-size: 21px;
+  letter-spacing: 2px;
+  color: black;
+  line-height: 30px;
+}
+
+nav, form label {
+  font-size: 19px;
+}
+
+a, button, input {
+  font-family: inherit;
+}
+
+a {
+  color: @blue;
+}
+
+button {
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.button-big {
+    font-size: 24px;
+}
+
+input {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: 30px;
+  text-indent: 30px;
+  color: @blue;
+  text-transform: uppercase;
+  @media (max-width: 575px) {
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-indent: 10px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 50px;
+  @media (max-width: 575px) {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  word-spacing: 6px;
+
+  @media (max-width: 575px) {
+    font-size: 25px;
+  }
+}

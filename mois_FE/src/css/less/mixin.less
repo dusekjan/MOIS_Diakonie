@@ -1,0 +1,90 @@
+@brighter: #F3EFEE;
+@bright: #EEE8E7;
+@light-gray: #bebab9;
+@gray: #8f8b8b;
+@darker-gray: #5f5d5c;
+@dark-gray: #181717;
+
+@light-green: #b3ffb3;
+@light-red: #ffb3b3;
+@dark-red: #ff3333;
+@dark-green: #33ff33;
+
+@blue: #009ee0;
+
+@homepage-selector: home;
+@menupage-selector: menu;
+@projectpage-selector: project;
+@donationspage-selector: donations;
+
+
+/* FLEX STUFF */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* GRADIENT */
+.gradient-base {
+  display: block;
+  position: absolute;
+  height: var(--gradient-height, 20%);
+  width: 100%;
+  content: '';
+}
+
+.gradient-top {
+  .gradient-base;
+  top: 0;
+  background-image: linear-gradient(to top, fade(#fff, 0) 0, #000 100%);
+}
+
+.gradient-bottom {
+  bottom: 0;
+  .gradient-base;
+  background-image: linear-gradient(to bottom, fade(#fff, 0) 0, #fff 100%);
+}
+
+.gradient-top-bottom {
+  .gradient-base;
+  bottom: 0;
+  height: 100%;
+  background-image: linear-gradient(to bottom,
+                    fade(#fff, 0)
+                    calc(100% - var(--gradient-height, 20%)),
+                    #000 100%),
+                    linear-gradient(to top,
+                    fade(#fff, 0)
+                    calc(100% - var(--gradient-height, 20%)),
+                    #000 100%);
+}
+
+
+/* LINK "ANIMATION" */
+.a-underline-transition {
+  position: relative;
+  top: 0;
+  transition: 300ms;
+  color: fade(@blue, 85);
+  text-decoration: underline fade(@blue, 30);
+  text-underline-offset: 12px;
+  text-decoration-thickness: 2px;
+
+  &:hover {
+    top: 4px;
+    color: @blue;
+    text-decoration-color: fade(@blue, 100);
+    text-underline-offset: 15px;
+    text-decoration-thickness: 3px;
+  }
+}

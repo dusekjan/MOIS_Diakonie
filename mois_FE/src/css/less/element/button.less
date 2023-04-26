@@ -1,0 +1,39 @@
+
+button {
+  color: @dark-gray;
+  background-color: @brighter;
+  border: 2px solid @darker-gray;
+  border-radius: 10px;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 300ms;
+  transition: visibility 0ms;
+  cursor: pointer;
+  min-width: 180px;
+
+  &:hover {
+    background-color: @light-gray;
+    color: @brighter;
+  }
+
+  &:disabled {
+    cursor: initial;
+    background-color: @brighter;
+    color: @light-gray;
+  }
+}
+
+.button-big {
+    .flex-row;
+    justify-content: flex-start;
+    margin: 24px auto 0;
+
+    svg {
+      margin-left: 5px;
+      margin-right: 6px;
+      width: 28px;
+      height: $width;
+    }
+  }

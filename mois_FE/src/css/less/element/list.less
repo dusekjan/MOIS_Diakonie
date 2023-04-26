@@ -1,0 +1,30 @@
+.list {
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+  & > li {
+    width: 100%;
+    .flex-row;
+    justify-content: space-between;
+    padding: 16px 56px;
+    border-bottom: 2px solid fade(@blue, 40);
+
+    @media (max-width: 700px) {
+      padding: 16px 8px;
+    }
+
+    .right, .left {
+      .flex-column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .right {
+      align-items: flex-end;
+    }
+
+    .left {
+      align-items: flex-start;
+    }
+  }
+}
