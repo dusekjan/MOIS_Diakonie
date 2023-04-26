@@ -63,7 +63,7 @@ def get_project(project_id):
     return json_response("ok", data=result)
 
 
-@bp.route('/donations/', methods=["GET"])
+@bp.route('/donations-api/', methods=["GET"])
 @admin_login_required
 def get_donations():
     result = {}

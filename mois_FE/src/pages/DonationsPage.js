@@ -12,7 +12,7 @@ function DonationsPage() {
 
     useEffect(() => {
         async function fetchDonations() {
-            const response = await makeRequest(`/donations/`)
+            const response = await makeRequest(`/donations-api/`)
             if (response.json_status === 401) {
                 navigate("/login")
             } else {
@@ -36,6 +36,10 @@ function DonationsPage() {
             preparedChartData.push(record)
 
         }
+
+        preparedChartData = preparedChartData.sort((a, b) => {
+            return new Date(a.createdAt) - new Date(b.createdAt)
+        })
     }
 
     const content = () => {

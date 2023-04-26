@@ -3,7 +3,7 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContain
 
 
 function Chart({data}) {
-
+    console.log(data)
     return (
         <>
             <h3>Sledování všech darů v čase:</h3>
